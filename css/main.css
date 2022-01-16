@@ -1,20 +1,20 @@
 #main .mask { height: 100vh; overflow: hidden; }
 
-.section { height: 100vh; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.section .inner { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
 
-.section .img { padding-right: 100px; }
+.section .inner .img { padding-right: 100px; }
 
-.section .img img { height: 800px; -o-object-fit: contain; object-fit: contain; }
+.section .inner .img img { height: 800px; -o-object-fit: contain; object-fit: contain; }
 
-.section .info { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); left: 100px; color: #fff; }
+.section .inner .info { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); left: 100px; color: #fff; }
 
-.section .info .category { font-size: 1.4rem; font-weight: 500; }
+.section .inner .info .category { font-size: 1.4rem; font-weight: 500; }
 
-.section .info .title { font-size: 4.2rem; font-weight: 700; margin-bottom: 30px; text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
+.section .inner .info .title { font-size: 4.2rem; font-weight: 700; margin-bottom: 30px; text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
 
-.section .info .depth { display: inline-block; padding-bottom: 5px; border-bottom: 1px solid #f00; margin-bottom: 80px; }
+.section .inner .info .depth { display: inline-block; padding-bottom: 5px; border-bottom: 1px solid #f00; margin-bottom: 80px; }
 
-.section .info .price { font-size: 24px; font-weight: 700; }
+.section .inner .info .price { font-size: 24px; font-weight: 700; }
 
 #indicator { position: fixed; bottom: 50px; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; z-index: 3; color: #fff; }
 
