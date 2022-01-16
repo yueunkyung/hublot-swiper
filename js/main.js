@@ -45,9 +45,12 @@ function loadClock(_url) {
                 speed: 1000,
                 mousewheel: true,
                 parallax: true,
+                pagination: {
+                    el: "#indicator .pagination",
+                    //clickable: true,
+                },
                 on: {
                     slideChangeTransitionStart: function () {
-                        // console.log(this);
                         $("#indicator .num").text(`${addZero(this.activeIndex + 1)}/${total}`);
                         gsap.set(`.section:nth-child(${this.activeIndex + 1}) .char`, {
                             y: -200,
@@ -55,7 +58,8 @@ function loadClock(_url) {
                         });
                     },
                     slideChangeTransitionEnd: function () {
-                        // console.log(this);
+                        //console.log(this);
+
                         gsap.to(`.section:nth-child(${this.activeIndex + 1}) .char`, {
                             y: 0,
                             opacity: 1,
