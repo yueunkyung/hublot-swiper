@@ -1,0 +1,75 @@
+@import "vars";
+html {
+    font-size: 10px;
+    min-height: 100vh;
+}
+body {
+    font-family: "Roboto", "Noto Sans KR";
+    font-size: 1.6rem;
+    background: repeating-linear-gradient(90deg, rgba(255, 226, 226, 0.05), rgba(255, 255, 255, 0.05) 1px, 0, transparent 2.5%) #333;
+    //fullpage에서 scrollBar가 true여야지 background-attachment 된 이미지가 보이는데 스크롤바가 보이니 그걸 제거해주는 css가 ooverflow: hidden !important;
+    //overflow: hidden !important;
+}
+#header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    #logo {
+        margin-left: 50px;
+        a {
+            display: block;
+            padding: 15px 0;
+            img {
+                height: 20px;
+            }
+        }
+    }
+    #gnb {
+        .gnbList {
+            display: flex;
+
+            li {
+                position: relative;
+                &.on:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #f00;
+                    left: 50%;
+                    bottom: 5px;
+                    transform: translateX(-50%);
+                    border-radius: 100%;
+                }
+                a {
+                    height: 50px;
+                    line-height: 50px;
+                    padding: 0 30px;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .utilMenu {
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: flex;
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 30px;
+            border-left: 1px solid #d9d9d9;
+            position: relative;
+            .material-icons {
+                @include absCenter();
+            }
+        }
+    }
+}
